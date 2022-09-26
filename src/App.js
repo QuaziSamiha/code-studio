@@ -4,21 +4,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <p>
+     গুচ্ছভুক্ত ২২টি সাধারণ ও বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়ের ভর্তি পরীক্ষার বিজ্ঞান বিভাগের ফলাফল প্রকাশিত হয়েছে। আজ বৃহস্পতিবার গুচ্ছভুক্ত বিশ্ববিদ্যালয়ের অফিশিয়াল ওয়েবসাইটে এই ফলাফল প্রকাশ করা হয়।
+     </p>
+     </div>
   );
 }
 
