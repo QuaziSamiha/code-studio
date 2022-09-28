@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Navbar() {
     return (
-        <div className='flex justify-center border-2 border-gray-300 py-2'>
-            <nav>
-                <ul className='space-x-4'>
+        <div className='inset-0 flex justify-center fixed w-full border-2 border-gray-200 pt-2 shadow-md bg-white h-12 font-bold tracking-wide'>
+            <nav className='py-2'>
+                <ul className='space-x-6'>
                     <li className='inline-block'>সর্বশেষ</li>
                     <li className='inline-block'>সফল উদ্যোগ</li>
                     <li className='inline-block'>স্টার্টআপ</li>

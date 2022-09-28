@@ -19,7 +19,7 @@ export default function Header() {
                     cross sign
                 </div>
                 <div className='col-span-2'>
-                    <img src={logo} className='h-12' />
+                    <img src={logo} className='h-10' />
                 </div>
             </div>
             <div className='px-10'>
