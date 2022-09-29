@@ -1,4 +1,5 @@
 import React from 'react'
+import DrawerNavbar from '../../Shared/DrawerNavbar/DrawerNavbar'
 import Footer from '../../Shared/Footer/Footer'
 import Navbar from '../../Shared/Navbar/Navbar'
 import Banner from '../Banner/Banner'
@@ -14,7 +15,8 @@ export default function Home() {
         <>
             <Header />
             <Navbar />
-            <section className='container mx-auto mb-8 mt-16 px-16 py-6'>
+            <DrawerNavbar />
+            <section className='mx-3 md:container md:mx-auto mb-8 mt-2 md:mt-12 md:px-16 md:py-2'>
                 <News1 />
                 <p className='border-b border-gray-400 py-4 w-full'> </p>
                 <News2 />
