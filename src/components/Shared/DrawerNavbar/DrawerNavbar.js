@@ -1,7 +1,7 @@
 import React from 'react'
 import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css'
-
+import crossSign from '../../../images/cross.png'
 const DrawerNavbar = () => {
     const [isOpen, setIsOpen] = React.useState(false)
     const toggleDrawer = () => {
@@ -11,23 +11,30 @@ const DrawerNavbar = () => {
     return (
         <>
             <button onClick={toggleDrawer}>
-                {/* Show */}
+                Show
             </button>
             <Drawer
                 open={isOpen}
                 onClose={toggleDrawer}
                 direction='left'
+                size={400}
                 className='bla bla bla'
             >
-                <div className='flex justify-center w-full border-t border-b border-gray-200 shadow-md bg-white font-bold tracking-wide'>
-                    <nav className='py-2'>
-                        <ul className='space-x-6'>
-                            <li className=''>সর্বশেষ</li>
-                            <li className=''>সফল উদ্যোগ</li>
-                            <li className=''>স্টার্টআপ</li>
-                            <li className=''>তারুণ্যের গল্প</li>
-                            <li className=''>নারী উদ্যোক্তা</li>
-                            <li className=''>ক্যাম্পাসের প্রিয়মুখ</li>
+                <div className='m-6 bg-white tracking-wide'>
+                    <div className='flex justify-between'>
+                        <h1 className='pl-2 text-xl'>আরো খবর পড়ুন</h1>
+                        <div className='pt-1 h-8'>
+                            <img className='h-2/3' src={crossSign} />
+                        </div>
+                    </div>
+                    <nav className='pl-6 py-2 font-bold'>
+                        <ul className=''>
+                            <li className='py-2'>সর্বশেষ</li>
+                            <li className='py-2'>সফল উদ্যোগ</li>
+                            <li className='py-2'>স্টার্টআপ</li>
+                            <li className='py-2'>তারুণ্যের গল্প</li>
+                            <li className='py-2'>নারী উদ্যোক্তা</li>
+                            <li className='py-2'>ক্যাম্পাসের প্রিয়মুখ</li>
                         </ul>
                     </nav>
                 </div>
