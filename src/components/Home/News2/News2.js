@@ -3,12 +3,12 @@ import image from '../../../images/grayImg.png'
 
 export default function News2() {
     return (
-        <div className='grid md:grid-cols-2 my-4'>
+        <div className='grid lg:grid-cols-2 my-4'>
             <div className='p-3'>
                 <div>
                     <img src={image} className='border rounded-lg' />
                 </div>
-                <div className='md:pl-8 text-gray-800 text-left	'>
+                <div className='lg:pl-8 text-gray-800 text-left	'>
                     <h1 className='text-2xl md:text-3xl py-3'>গুচ্ছভুক্ত বিশ্ববিদ্যালয়ের বিজ্ঞান বিভাগের ফল প্রকাশ</h1>
                     <article>
                         <p className='text-base py-1 md:py-2.5'>
@@ -28,7 +28,7 @@ export default function News2() {
                 <div>
                     <img src={image} className='border rounded-lg' />
                 </div>
-                <div className='md:pl-8 text-gray-800 text-left	'>
+                <div className='lg:pl-8 text-gray-800 text-left	'>
                     <h1 className='text-2xl md:text-3xl py-3'>গুচ্ছভুক্ত বিশ্ববিদ্যালয়ের বিজ্ঞান বিভাগের ফল প্রকাশ</h1>
                     <article>
                         <p className='text-base py-1 md:py-2.5'>
