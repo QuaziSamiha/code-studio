@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Navbar() {
     return (
-        <div className='inset-0 flex justify-center fixed w-full border-2 border-gray-200 pt-2 shadow-md bg-white h-12 font-bold tracking-wide'>
+        <div className='flex justify-center w-full border-t border-b border-gray-200 shadow-md bg-white font-bold tracking-wide'>
             <nav className='py-2'>
                 <ul className='space-x-6'>
                     <li className='inline-block'>সর্বশেষ</li>

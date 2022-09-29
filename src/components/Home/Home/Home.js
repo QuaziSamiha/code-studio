@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../Shared/Footer/Footer'
 import Navbar from '../../Shared/Navbar/Navbar'
 import Banner from '../Banner/Banner'
 import Header from '../Header/Header'
@@ -13,21 +14,21 @@ export default function Home() {
         <>
             <Header />
             <Navbar />
-            <section className='container mx-auto h-96 my-8 px-14 py-6'>
+            <section className='container mx-auto mb-8 mt-16 px-16 py-6'>
                 <News1 />
-                <hr />
+                <p className='border-b border-gray-400 py-4 w-full'> </p>
                 <News2 />
-                <hr />
+                <p className='border-b border-gray-400 py-4 w-full'> </p>
                 <Banner />
-                <hr />
                 <News3 />
-                <hr />
+                <p className='border-b border-gray-400 py-4 w-full'> </p>
                 <News4 />
-                <hr />
+                <p className='border-b border-gray-400 py-4 w-full'> </p>
                 <News5 />
-                <hr />
+                <p className='border-b border-gray-400 py-4 w-full'> </p>
                 <Banner />
             </section>
+            <Footer />
         </>
     )
 }
