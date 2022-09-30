@@ -1,8 +1,11 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css'
 import crossSign from '../../../images/cross.png'
-const DrawerNavbar = () => {
+// import { ImCross } from "react-icons/fa";
+
+const DrawerNavbar = (props) => {
     const [isOpen, setIsOpen] = React.useState(false)
     const toggleDrawer = () => {
         setIsOpen((prevState) => !prevState)
@@ -24,7 +27,12 @@ const DrawerNavbar = () => {
                     <div className='flex justify-between'>
                         <h1 className='pl-2 text-xl'>আরো খবর পড়ুন</h1>
                         <div className='pt-1 h-8'>
-                            <img className='h-2/3' src={crossSign} />
+                            <button onClick={toggleDrawer}>
+                                {/* <ImCross /> */}
+                                <img className='w-6 h-6' src={crossSign} />
+                                {/* <FontAwesomeIcon icon={f}/> */}
+                            </button>
+
                         </div>
                     </div>
                     <nav className='pl-6 py-2 font-bold'>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import image from '../../../images/grayImg.png'
 
 export default function News1() {
@@ -18,7 +19,8 @@ export default function News1() {
                     </p>
                 </article>
                 <p  className='text-base py-3 text-blue-500 text-lg'>
-                    <a>বিস্তারিত</a>
+                    {/* <a>বিস্তারিত</a> */}
+                    <Link to="/details">বিস্তারিত</Link>
                 </p>
             </div>
         </div>

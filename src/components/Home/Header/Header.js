@@ -9,12 +9,14 @@ export default function Header() {
     var month = date.getMonth()
     var d = date.getDate()
 
-    console.log(date)
+    // console.log(date)
     return (
         <div className='container mx-auto mb-4 mt-6 px-4 md:px-16'>
             <div className='grid grid-cols-3 px-2 md:px-16'>
                 <div>
-                    <img className='w-5 md:w-8 h-6 md:h-10' src={barSign} />
+                    <button>
+                        <img className='w-5 md:w-8 h-6 md:h-10' src={barSign} />
+                    </button>
                 </div>
                 <div className='col-span-2'>
                     <img src={logo} className='h-6 md:h-10 pr-4' />
