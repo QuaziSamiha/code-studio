@@ -1,15 +1,31 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css'
 import crossSign from '../../../images/cross.png'
-// import { ImCross } from "react-icons/fa";
 
 const DrawerNavbar = (props) => {
+
+    // for drawer toggle button
     const [isOpen, setIsOpen] = React.useState(false)
     const toggleDrawer = () => {
         setIsOpen((prevState) => !prevState)
     }
+
+    // ----------------------------- for data load from backend -------------------------------------
+    const [categories, setCategories] = useState({});
+
+    const getCategories = async () => {
+        const response = await fetch(`https://uddokta.code-studio4.com/category`)
+        setCategories(await response.json())
+    }
+
+    useEffect(() => {
+        getCategories();
+    }, []);
+
+    // console.log(categories);
+    const allCategories = categories.allCategoryList;
+    // console.log(allCategories);
 
     return (
         <>
@@ -28,21 +44,28 @@ const DrawerNavbar = (props) => {
                         <h1 className='pl-2 text-xl'>আরো খবর পড়ুন</h1>
                         <div className='pt-1 h-8'>
                             <button onClick={toggleDrawer}>
-                                {/* <ImCross /> */}
                                 <img className='w-6 h-6' src={crossSign} />
-                                {/* <FontAwesomeIcon icon={f}/> */}
                             </button>
 
                         </div>
                     </div>
                     <nav className='pl-6 py-2 font-bold'>
                         <ul className=''>
-                            <li className='py-2'>সর্বশেষ</li>
+                            {
+                                allCategories?.map((category, index) => {
+                                    return (
+                                        <li key={index} className='py-2'>
+                                            {category.type}
+                                        </li>
+                                    )
+                                })
+                            }
+                            {/* <li className='py-2'>সর্বশেষ</li>
                             <li className='py-2'>সফল উদ্যোগ</li>
                             <li className='py-2'>স্টার্টআপ</li>
                             <li className='py-2'>তারুণ্যের গল্প</li>
                             <li className='py-2'>নারী উদ্যোক্তা</li>
-                            <li className='py-2'>ক্যাম্পাসের প্রিয়মুখ</li>
+                            <li className='py-2'>ক্যাম্পাসের প্রিয়মুখ</li> */}
                         </ul>
                     </nav>
                 </div>
